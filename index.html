@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gerador de Senhas Premium</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔐 Gerador de Senhas</h1>
+
+<div class="senha-box">
+<input type="text" id="senha" readonly placeholder="Sua senha aparecerá aqui">
+<button id="copiar">📋</button>
+</div>
+
+<div class="forca">
+<div id="barra"></div>
+</div>
+
+<div class="opcoes">
+
+<div class="grupo">
+<label>Tamanho da senha</label>
+<input type="number" id="tamanho" value="16" min="4" max="100">
+</div>
+
+<div class="grupo">
+<label>
+<input type="checkbox" id="maiusculas" checked>
+Letras Maiúsculas
+</label>
+
+<label>
+<input type="checkbox" id="minusculas" checked>
+Letras Minúsculas
+</label>
+
+<label>
+<input type="checkbox" id="numeros" checked>
+Números
+</label>
+
+<label>
+<input type="checkbox" id="simbolos" checked>
+Símbolos
+</label>
+</div>
+
+<div class="grupo">
+<label>Excluir caracteres</label>
+<input type="text" id="excluir" placeholder="Ex: O0Il">
+</div>
+
+<div class="grupo">
+<label>Adicionar caracteres personalizados</label>
+<input type="text" id="extras" placeholder="Ex: @#$ABC">
+</div>
+
+</div>
+
+<button class="gerar" onclick="gerarSenha()">
+Gerar Senha
+</button>
+
+<h2>Histórico</h2>
+
+<ul id="historico"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
